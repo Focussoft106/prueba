@@ -21,6 +21,7 @@ public class DatosPersonalesRest {
     @GetMapping("/datos-personales")
     public ResponseEntity<List<DatosPersonalesDto>> getDatosPersonales(){
         try {
+			/* Obtenemos lista de datos personales */
             List<DatosPersonalesDto> datosPersonalesDtos = datosPersonalesService.allDatosPersonalesDtos();
             return new ResponseEntity<>(datosPersonalesDtos, HttpStatus.OK);
         }
